@@ -1,17 +1,12 @@
-function removeDuplicate(arr){
-   
-    for (i=0;i<arr.length;i++){
-        for(const num of arr){
-            if(arr[i]===num){
-                 arr.filter(arr[i])
-
-            }
-
-
+function removeDups(numbers) {
+    let unique = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (unique.indexOf(numbers[i]) === -1) {
+            unique.push(numbers[i]);
         }
-      
     }
-return arr
+    return unique;
 }
-let arr = [1,4,57,8,4,1]
-console.log(removeDuplicate(arr))
+
+const numbers = [1, 5, 5, 6, 7];
+console.log(removeDups(numbers));
