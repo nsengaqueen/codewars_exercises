@@ -30,3 +30,25 @@ let Tunit = time.replace(/[\d\.\s]/g, '');
 
 console.log(calculateSpeed("3km", "5min"));  
 console.log(calculateSpeed("500m", "45s"));  
+
+
+// another way:
+
+function calculateSpeed(distance, time) {
+   
+    let Newd = parseInt(distance);
+    let Newt = parseInt(time);
+   
+
+    if (distance.endsWith("km")) {
+        Newd *= 1000;
+    }
+
+    
+    if (time.endsWith("min")) {
+        Newt *= 60;
+    }
+
+  
+    return Math.round((Newd / Newt) * 2.23694) + "mph";
+}
