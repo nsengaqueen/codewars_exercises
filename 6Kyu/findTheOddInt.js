@@ -1,15 +1,19 @@
-function findOdd(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] === arr[i]) {
-        count++;
-      }
-    }
+function digitalRoot(num) {
+  let sumOfNum;
 
-    if (count % 2 !== 0) {
-      return arr[i];
-    }
+  if (num.toString().length > 1) {
+    sumOfNum = num
+      .toString()
+      .split("")
+      .reduce((sum, number) => sum + Number(number), 0);
+  } else {
+    return num;
   }
+
+  return digitalRoot(sumOfNum);
 }
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
+
+function digital_root(n) {
+  return ((n - 1) % 9) + 1;
+}
