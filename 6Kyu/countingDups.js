@@ -14,6 +14,7 @@ function duplicateCount(text){
       
     }
 }
+return count
 }
 
 
