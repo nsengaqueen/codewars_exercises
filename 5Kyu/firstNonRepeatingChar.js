@@ -1,14 +1,9 @@
 function firstNonRepeatingLetter(s) {
-  const lowerS = s.toLowerCase();
-
-  for (let char of s) {
-    if (
-      lowerS.indexOf(char.toLowerCase()) ===
-      lowerS.lastIndexOf(char.toLowerCase())
-    ) {
-      return char;
+  let str = s.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+      return s[i];
     }
   }
-
   return "";
 }
