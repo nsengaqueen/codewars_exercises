@@ -11,3 +11,13 @@ function onlyDuplicates(str) {
   return repeat.join("");
 }
 console.log(onlyDuplicates("strr"));
+
+
+//
+
+function onlyDuplicates(str) {
+  return str
+    .split("")
+    .filter((e) => str.indexOf(e) != str.lastIndexOf(e))
+    .join("");
+}
