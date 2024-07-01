@@ -1,0 +1,24 @@
+function longest(s1, s2) {
+  // your code
+  let mySet = new Set();
+  let array = []
+  for(let char1 of s1){
+   mySet.add(char1)
+  }
+   for(let char2 of s2){
+   mySet.add(char2) 
+  }
+    let myArr = Array.from(mySet)
+    
+   let sorted = myArr.sort().join('')
+    return sorted
+}
+
+
+// 2nd way
+
+function longest(s1, s2) {
+  // your code
+  return [...new Set(s1 + s2)].sort().join("");
+}
+console.log(longest("bzvhaksiwu", "hjfkykus"));
