@@ -7,3 +7,4 @@ function combat(health, damage) {
 
   return health;
 }
+
